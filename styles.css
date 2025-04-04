@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Orbitron", sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --header-bg: #117bff;
+    --header-text: #ffffff;
+    --button-bg: #117bff;
+    --button-hover: #0d5ebd;
+    --footer-bg: #117bff;
+    --footer-text: #ffffff;
+}
+
+html[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --header-bg: #0d5ebd;
+    --button-bg: #0d5ebd;
+    --button-hover: #094a92;
+    --footer-bg: #0d5ebd;
+    --footer-text: #ffffff;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    background-color: var(--header-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--header-text);
+    text-decoration: none;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.theme-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.theme-toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 3.5rem;
+    height: 1.8rem;
+}
+
+.theme-toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.theme-toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 1.8rem;
+    transition: 0.4s;
+}
+
+.theme-toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4rem;
+    width: 1.4rem;
+    left: 0.2rem;
+    bottom: 0.2rem;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input:checked + .theme-toggle-slider {
+    background-color: #444444;
+}
+
+input:checked + .theme-toggle-slider:before {
+    transform: translateX(1.7rem);
+}
+
+.about-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.about-btn a {
+    color: white;
+    text-decoration: none;
+}
+
+.about-btn:hover {
+    background-color: #333;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 80%;
+}
+
+.game-btn {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background-color: var(--button-bg);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+.game-btn:hover {
+    background-color: var(--button-hover);
+    transform: translateY(-0.2rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3rem;
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .button-container {
+        max-width: 90%;
+    }
+
+    header {
+        padding: 0 1.5rem;
+    }
+
+    footer {
+        padding: 0 1.5rem;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+    }
+
+    .about-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .theme-toggle-switch {
+        width: 3rem;
+        height: 1.6rem;
+    }
+
+    .theme-toggle-slider:before {
+        height: 1.2rem;
+        width: 1.2rem;
+    }
+
+    input:checked + .theme-toggle-slider:before {
+        transform: translateX(1.4rem);
+    }
+}

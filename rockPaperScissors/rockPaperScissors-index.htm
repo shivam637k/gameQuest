@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-Scissors</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="rockPaperScissors-styles.css">
+</head>
+
+<body>
+    <header>
+        <a href="../index.htm" class="logo">TapQuest</a>
+        <div class="header-buttons">
+            <span id="theme-icon" class="theme-icon">🌞</span>
+            <label class="theme-toggle-switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="theme-toggle-slider"></span>
+            </label>
+            <a href="../index.htm"><button class="home-btn">Home</button></a>
+            <a href="../aboutMe/about-index.htm"><button class="about-btn">About Me</button></a>
+        </div>
+    </header>
+
+    <h1>
+        Rock-Paper-Scissors
+    </h1>
+
+    <div class="choices">
+        <div class="choice" id="rock">
+            <img src="./images/rock.png" alt="rock">
+        </div>
+        <div class="choice" id="paper">
+            <img src="./images/paper.png" alt="paper">
+        </div>
+        <div class="choice" id="scissors">
+            <img src="./images/scissors.png" alt="scissors">
+        </div>
+    </div>
+
+    <div class="score-board">
+        <div class="score">
+            <p id="user-score">0</p>
+            <p>You</p>
+        </div>
+        <div>
+            <p id="comp-score">0</p>
+            <p>Comp</p>
+        </div>
+    </div>
+
+    <div class="msg-container">
+        <p class="msg">
+            Play Your Move
+        </p>
+    </div>
+    
+    <div class="reset-game">
+        <button id="reset-btn">
+            Reset Game
+        </button>
+    </div>
+
+    <footer>
+        <div>TapQuest Inc.</div>
+        <div>Copyright @2025</div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script src="../scripts/script.js"></script>
+    <script src="../scripts/mode.js"></script>
+</body>
+
+</html>
