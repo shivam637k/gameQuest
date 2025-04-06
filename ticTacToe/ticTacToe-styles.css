@@ -126,7 +126,7 @@ html[data-theme="dark"] .game {
 }
 
 html[data-theme="dark"] .box {
-    background-color: #333;
+    background-color: #0d5ebd;
     color: #fff;
     border: 2px solid #555;
 }
