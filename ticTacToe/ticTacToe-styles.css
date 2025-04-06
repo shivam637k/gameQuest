@@ -126,14 +126,14 @@ html[data-theme="dark"] .game {
 }
 
 html[data-theme="dark"] .box {
-    background-color: #0d5ebd;
+    background-color: #0d4686;
     color: #fff;
     border: 2px solid #555;
 }
 
-/* html[data-theme="dark"] #msg {
+html[data-theme="dark"] #msg {
     color: #fff;
-} */
+}
 
 html[data-theme="dark"] #new-btn,
 html[data-theme="dark"] #reset-btn {
